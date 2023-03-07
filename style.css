@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --fonte1: verdana, Geneva, Tahoma, sans-serif; 
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+
+/* (*)Configurações gerais. OBS: Juntar os elementos*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{/*Corpo do site*/
+    min-height: 100vh;/*tamanho mínimo da altura*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+
+}
+
+header { /*Cabeçalho*/
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {/*h1 do cabeçalho*/
+    padding-top: 50px;/*Espaço acima do cabeçalho*/
+    /*text-transform: uppercase; /*Letras maiúsculas*/
+    font-variant: small-caps; /*Outra maneira de letras grandes*/
+    font-family: var(--fonte2);
+    font-size: 10vw;
+
+}
+
+header > p {
+    padding-bottom: 50px; /*Espaço abaixo do cabeçalho*/
+}
+header a, footer a { /* Link do cabeçalho*/
+    color: white;
+    text-decoration: none; /*Tirar sublinhado do link*/
+    font-weight: bolder; /*Negrito do link*/
+
+}
+
+header a:hover, footer a:hover {/*Hover aciona efeitos nos elementos quando passa o mouse*/
+    text-decoration: underline;/*Fica sublinhado ao passar o mouse no link*/
+}
+
+section {/*Configuração para section normal e imagem - Ganhar espaço para o efeito paralax*/
+    padding-top: 10vh;/*Ganha 10 por cento da altura*/
+    padding-bottom: 10vh;/*Ganha 10 por cento da altura*/
+    line-height: 2em;/*Espaçamento entre linhas*/
+    padding-left: 30px;/*Afastar da margem esquerda*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+
+}
+
+section > p {/*Section do parágrafo. Espaço entre os parágrafos*/
+    padding-bottom: 2em;
+}
+
+section.normal {/*Section da classe normal*/
+    background-color: white;
+    color: black;
+
+}
+
+section.imagem {/*Section da classe imagem*/
+    background-color: rgb(63, 59, 59);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.795);/*Sombra interna na imagem*/
+    background-size: cover;/*Ajusta a imagem (diminui)*/
+    background-attachment: fixed;/*Fixando a imagem (Efeito paralax)*/
+
+}
+
+section.imagem > p {/*Cor do parágrafo da section imagem*/
+    display: inline-block;/*Caixa que se adapta ao tamanho do conteúdo*/
+    padding: 5px;/*Espaço para não colar nas margens*/
+    background-color: rgba(0, 0, 0, 0.524);
+    text-shadow: 1px 1px 0px black;/*Sombra no texto*/
+    
+}
+
+section#img01 {
+    background-image: url('imagens/background001.jpg');
+    background-position: right center;
+    
+
+}
+
+section#img02 {
+    background-image: url('imagens/background002.jpg');
+    
+
+}
+
+footer {/*Rodapé*/
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
